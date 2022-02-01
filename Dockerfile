@@ -1,14 +1,13 @@
 FROM quay.io/sreejithvh6/dotnetimage:latest
-WORKDIR /app
+RUN mkdir -p /app
+
 # copy csproj and restore as distinct layers
-COPY *.csproj ./dotnetapp/
-WORKDIR /app/dotnetapp
+COPY *.csproj /app
+
+WORKDIR /app
 RUN dotnet restore
 
-# copy and build everything else
-WORKDIR /app/
-COPY . ./dotnetapp/
-WORKDIR /app/dotnetapp
+
 RUN dotnet publish -c Release -o out
 
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
