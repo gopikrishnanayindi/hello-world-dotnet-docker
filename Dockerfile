@@ -3,7 +3,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 COPY *.csproj ./dotnetapp/
 WORKDIR /app/dotnetapp
-RUN nuget restore
+RUN dotnet restore
 
 # copy and build everything else
 WORKDIR /app/
