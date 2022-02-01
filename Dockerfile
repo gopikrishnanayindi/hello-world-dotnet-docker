@@ -4,7 +4,7 @@ FROM quay.io/sreejithvh6/dotnetimage:latest
 # copy csproj and restore as distinct layers
 COPY *.csproj /app
 
-WORKDIR /app
+#WORKDIR /app
 RUN dotnet restore
 
 
