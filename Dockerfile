@@ -1,5 +1,5 @@
 FROM quay.io/sreejithvh6/dotnetimage:latest
-RUN mkdir -p /app
+##RUN mkdir -p /app
 
 # copy csproj and restore as distinct layers
 COPY *.csproj /app
