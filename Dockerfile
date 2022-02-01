@@ -10,3 +10,5 @@ WORKDIR /app/
 COPY . ./dotnetapp/
 WORKDIR /app/dotnetapp
 RUN dotnet publish -c Release -o out
+
+ENTRYPOINT ["dotnet", "aspnetapp.dll"]
