@@ -1,6 +1,6 @@
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
-
+#FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
+FROM registry.redhat.io/dotnet/dotnet-31-jenkins-agent-rhel7:3.1-36
 #FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build-env
 
 
