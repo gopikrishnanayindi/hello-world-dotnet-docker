@@ -15,7 +15,7 @@ COPY *.csproj ./
 COPY . ./
 
 RUN scl enable rh-dotnet31 'dotnet help'
-RUN chmod 777 /app
+RUN chmod -R 755 /app
 RUN scl enable rh-dotnet31 'dotnet restore'
 
 #RUN dotnet publish -c Release -o out
