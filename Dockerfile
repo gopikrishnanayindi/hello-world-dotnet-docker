@@ -17,7 +17,7 @@ USER root
 RUN scl enable rh-dotnet31 'dotnet help'
 #RUN chmod -R 755 /app
 RUN scl enable rh-dotnet31 'dotnet restore'
-
+RUN scl enable rh-dotnet31 'dotnet publish'
 #RUN dotnet publish -c Release -o out
 
 ENTRYPOINT ["dotnet", "aspnetapp.dll"]
