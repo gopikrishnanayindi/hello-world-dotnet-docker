@@ -15,6 +15,7 @@ COPY *.csproj ./
 COPY . ./
 
 RUN scl enable rh-dotnet31 'dotnet help'
+RUN scl enable rh-dotnet31 'dotnet restore'
 
 #RUN dotnet publish -c Release -o out
 
