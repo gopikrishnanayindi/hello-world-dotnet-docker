@@ -13,7 +13,7 @@ COPY *.csproj ./
 
 #RUN dotnet restore
 COPY . ./
-
+USER root
 RUN scl enable rh-dotnet31 'dotnet help'
 #RUN chmod -R 755 /app
 RUN scl enable rh-dotnet31 'dotnet restore'
